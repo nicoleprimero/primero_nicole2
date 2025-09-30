@@ -20,7 +20,7 @@ class Auth
     /**
      * Register a new user
      */
-    public function register($username, $email, $password, $role = 'user')
+    public function register($username, $email, $password, $role = 'fairy')
     
     {
         
@@ -84,26 +84,6 @@ class Auth
     }
 
 
-    public function reset_password($email) {
-		$row = $this->_lava->db
-						->table('magicusers')
-						->where('email', $email)
-						->get();
-		if($this->_lava->db->row_count() > 0) {
-			$this->_lava->call->helper('string');
-			$data = array(
-				'email' => $email,
-				'reset_token' => random_string('alnum', 10)
-			);
-			$this->_lava->db
-				->table('password_reset')
-				->insert($data)
-				;
-			return $data['reset_token'];
-		} else {
-			return FALSE;
-		}
-	}
     
 
 
