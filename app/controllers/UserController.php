@@ -38,9 +38,10 @@ class UserController extends Controller {
     
             $username = $this->io->post('username');
             $email    = $this->io->post('email');
+            $password = $this->io->post('password');
             $role     = $this->io->post('role');
 
-            $this->UserModel->create($username, $email, $role);
+            $this->UserModel->create($username, $email, $password, $role);
 
            
             $this->session->set_flashdata('success','User added successfully!');
@@ -62,7 +63,6 @@ class UserController extends Controller {
             $data = [
                 'username' => $this->io->post('username'),
                 'email' => $this->io->post('email'),
-                'password' => $this->io->post('password'),
                 'role' => $this->io->post('role')
             ];
             $this->UserModel->update($id, $data);
