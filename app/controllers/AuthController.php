@@ -17,7 +17,7 @@ public function register()
         $email = $this->io->post('email');
         $password = $this->io->post('password');
         $role = isset($_POST['role']) ? $_POST['role'] : 'fairy'; // ✅ fixed safely
-        $created_at = date('Y-m-d H:i:s'); // ✅ added created_at timestamp
+        $created_at = date('Y-m-d H:i:s', time() + 8*3600); // ✅ added created_at timestamp
 
         $this->call->library('auth');
         $this->auth->register($username, $email, $password, $role, $created_at);
