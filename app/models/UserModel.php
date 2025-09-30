@@ -20,7 +20,8 @@ class UserModel extends Model {
             'username' => $username,
             'email' => $email,
             'password' => password_hash($password, PASSWORD_BCRYPT),
-            'role' => $role
+            'role' => $role,
+            'created_at' => date('Y-m-d H:i:s', time() + 8*3600)
         );
         return $this->db->table('magicusers')->insert($data);
     }   

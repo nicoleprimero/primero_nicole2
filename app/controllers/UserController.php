@@ -40,8 +40,9 @@ class UserController extends Controller {
             $email    = $this->io->post('email');
             $password = $this->io->post('password');
             $role     = $this->io->post('role');
+            $created_at = date('Y-m-d H:i:s', time() + 8*3600);
 
-            $this->UserModel->create($username, $email, $password, $role);
+            $this->UserModel->create($username, $email, $password, $role, $created_at);
 
            
             $this->session->set_flashdata('success','User added successfully!');
