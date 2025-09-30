@@ -63,7 +63,8 @@ class UserController extends Controller {
             $data = [
                 'username' => $this->io->post('username'),
                 'email' => $this->io->post('email'),
-                'role' => $this->io->post('role')
+                'role' => $this->io->post('role'),
+                'updated_at' => date('Y-m-d H:i:s')
             ];
             $this->UserModel->update($id, $data);
             redirect('users/view');
