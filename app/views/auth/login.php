@@ -29,9 +29,7 @@
                 <button type="submit" class="submit-btn">✨ Log In</button>
             </form>
 
-                 <div class="form-group" style="margin-top: 10px; text-align: center;">
-                    <a href="<?=site_url('auth/password-reset');?>">Forgot Your Password?</a>
-                </div>
+                
 
             <!-- Navigation Links -->
             <p style="margin-top: 15px;">
