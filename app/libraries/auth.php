@@ -20,7 +20,7 @@ class Auth
     /**
      * Register a new user
      */
-    public function register($username, $email, $password, $role = 'fairy')
+    public function register($username, $email, $password, $role = 'fairy', $created_at)
     
     {
         
