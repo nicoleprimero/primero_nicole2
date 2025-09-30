@@ -15,10 +15,11 @@ class UserModel extends Model {
         parent::__construct();
     }
 
-    public function create($username, $email, $role) {
+    public function create($username, $email, $password, $role) {
         $data = array(
             'username' => $username,
             'email' => $email,
+            'password' => password_hash($password, PASSWORD_BCRYPT),
             'role' => $role
         );
         return $this->db->table('magicusers')->insert($data);
