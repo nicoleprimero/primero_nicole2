@@ -46,7 +46,7 @@
 
             <!-- Navigation Links -->
             <p style="margin-top: 15px;">
-                <a href="<?=site_url('users/view');?>" class="back-btn">← Go Back</a>
+                <a href="<?=site_url('users/view');?>">Go Back</a>
             </p>
 
            
