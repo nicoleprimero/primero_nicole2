@@ -78,7 +78,7 @@
 
   <!-- Action buttons (Add + Logout) on right -->
   <div class="action-buttons">
-    <a href="<?= site_url('users/add_User'); ?>" class="btn-action btn-add">+ Add User</a>
+    <a href="<?= site_url('auth/register'); ?>" class="btn-action btn-add">+ Add User</a>
     <a href="<?=site_url('auth/logout');?>" class="btn-action btn-logout">🚪 Logout</a>
   </div>
 </div>
